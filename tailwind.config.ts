@@ -17,6 +17,7 @@ const config: Config = {
 
       colors: {
         "bg-gray": "#37384c",
+        "buy-bg": "#f9f7f6",
         "text-gray": "#656675",
       },
     },

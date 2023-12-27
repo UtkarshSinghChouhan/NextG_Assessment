@@ -1,1 +1,30 @@
-<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="600" fill="#090205"></rect><g transform="translate(485.3617247793525 303.2209249605649)"><path d="M65 48.7C21.7 112.5 -119.1 131.3 -146.1 76.8C-173.2 22.3 -86.6 -105.3 -16.2 -114.7C54.1 -124.1 108.3 -15.2 65 48.7" fill="#f1e4e9"></path></g></svg>
+<svg
+    id="visual"
+    viewBox="0 0 900 600"
+    width="900"
+    height="600"
+    xmlns="http://www.w3.org/2000/svg"
+    version="1.1"
+>
+<mask id="mask1" mask-type="alpha">
+    <path
+    d="M65 48.7C21.7 112.5 -119.1 131.3 -146.1 76.8C-173.2 22.3 -86.6 -105.3 -16.2 -114.7C54.1 -124.1 108.3 -15.2 65 48.7"
+    fill="#f1e4e9"
+    ></path>
+</mask>
+<g
+    mask="url(#mask1)"
+    transform="translate(485.3617247793525 303.2209249605649)"
+>
+    <path
+    d="M65 48.7C21.7 112.5 -119.1 131.3 -146.1 76.8C-173.2 22.3 -86.6 -105.3 -16.2 -114.7C54.1 -124.1 108.3 -15.2 65 48.7"
+    fill="#f1e4e9"
+    ></path>
+    <image
+        className="w-[270px]"
+        x="-160"
+        y="-120"
+        href="/static-assets/images/nav-img-1.jpg"
+    />
+</g>
+</svg>

@@ -1,9 +1,10 @@
 import { NAV_ITEMS } from "@/data/nav-data";
-import { INav } from "@/models/interfaces";
+import { INavBar } from "@/models/interfaces";
 import React, { ReactNode, useState } from "react";
 import Navbar from "@/components/organisms/navbar";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import NavListItem from "@/components/molecules/nav-list-item";
 
 // ================= UNDERLINE ANIMATION ========================
 const LinkAnimation = ({ children }: { children: any }) => {
@@ -46,22 +47,18 @@ const LinkAnimation = ({ children }: { children: any }) => {
   );
 };
 
-const NavContent = ({ setToggle }: INav) => {
+const NavContent = ({ setToggle, setToggleBuy }: INavBar) => {
   return (
     <div className="relative z-10 w-full h-full max-w-[68%] text-center flex flex-col  items-center py-12">
       {/* NavBar */}
-      <Navbar setToggle={setToggle} cross={true} />
+      <Navbar setToggle={setToggle} setToggleBuy={setToggleBuy} cross={true} />
 
       {/* Menu-items List */}
-      <ul className="my-auto">
+      <ul className="my-auto flex flex-col gap-3 w-fit h-fit">
         {NAV_ITEMS.map(
           (item: string, idx: number): ReactNode => (
             <React.Fragment key={idx}>
-              <li
-                className={`cursor-pointer hover:opacity-65  text-white transition leading-normal text-[54px]`}
-              >
-                {item}
-              </li>
+              <NavListItem item={item} />
             </React.Fragment>
           )
         )}

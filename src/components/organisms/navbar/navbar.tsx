@@ -1,21 +1,23 @@
-import { INav } from "@/models/interfaces";
+import { INav, INavBar } from "@/models/interfaces";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-interface INavBar extends INav {
-  cross?: boolean;
-}
-
-const Navbar = ({ setToggle, cross = false }: INavBar) => {
+const Navbar = ({ setToggle, setToggleBuy, cross = false }: INavBar) => {
   return (
-    <section className="flex items-center justify-between w-full h-fit">
+    <section className=" flex items-center justify-between w-full h-fit">
       {/* Logo */}
       <p className="text-white text-2xl leading-normal cursor-pointer">{`Clingr`}</p>
 
       {/* Buy button and Hamburger icon*/}
-      <div className="flex  gap-[3.5rem]">
+      <div className="relative z-50 bg-white/40 flex  gap-[3.5rem]">
         <div className="relative">
-          <p className="leading-none text-white">{`Buy`}</p>
+          <p
+            className="leading-none text-white cursor-pointer"
+            onClick={() => {
+              setToggleBuy(true);
+              setToggle(false);
+            }}
+          >{`Buy`}</p>
         </div>
 
         {!cross ? (
