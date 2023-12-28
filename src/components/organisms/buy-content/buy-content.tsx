@@ -10,7 +10,8 @@ const BuyContent = ({ setToggle }: INav) => {
       <div className="w-[81%] h-[82%] flex">
         {/* left  */}
         <div className="relative w-[50%] h-full ">
-          <div className="text-[84px] text-[#bc978c] absolute z-10 pt-[3.25rem] pl-[3.25rem] -space-y-28">
+          {/* <div className="text-[84px] text-[#bc978c] absolute z-10 pt-[3.25rem] pl-[3.25rem] -space-y-28"> */}
+          <div className="text-[84px] text-[#bc978c] absolute z-50 pt-[3.25rem] pl-[3.25rem] -space-y-28">
             <motion.span
               className="block w-fit h-fit leading-none"
               initial={{ opacity: 0, y: 100 }}
@@ -44,7 +45,7 @@ const BuyContent = ({ setToggle }: INav) => {
             priority
             loading="eager"
             quality={80}
-            className="absolute z-10 top-[18rem] left-20"
+            className="absolute z-10 bottom-0 left-1/2 -translate-x-1/2"
           />
 
           <Image

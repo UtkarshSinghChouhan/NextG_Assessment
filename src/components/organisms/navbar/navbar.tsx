@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Navbar = ({ setToggle, setToggleBuy, cross = false }: INavBar) => {
   return (
-    <section className="sticky flex items-center justify-between w-full h-fit cursor-pointer">
+    <section className="absolute flex items-center justify-between w-full h-fit cursor-pointer">
       {/* Logo */}
       <p className="text-white text-2xl leading-normal cursor-pointer">{`Clingr`}</p>
 

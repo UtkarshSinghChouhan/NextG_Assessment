@@ -1,5 +1,6 @@
 import { INavItem } from "@/models/interfaces";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const NavListItem = ({ item }: INavItem) => {
   const variants = {
@@ -22,15 +23,21 @@ const NavListItem = ({ item }: INavItem) => {
     <li>
       <motion.div
         className={`relative cursor-pointer hover:opacity-65 transition `}
-        initial="rest"
-        whileHover="hover"
-        animate="rest"
+        initial="initial"
+        whileHover="whileHover"
       >
         <motion.div
-          className="w-[900px] h-[600px] absolute -z-10 -top-[36rem] -left-36"
-          variants={variants}
+          className="w-[400px] h-[300px] absolute z-0 top-0 left-0"
+          variants={{
+            initial: {
+              scale: 0,
+            },
+            whileHover: {
+              scale: 1,
+            },
+          }}
         >
-          <svg
+          {/* <svg
             id="visual"
             viewBox="0 0 900 600"
             width="100%"
@@ -59,7 +66,17 @@ const NavListItem = ({ item }: INavItem) => {
                 href="/static-assets/images/nav-img-1.jpg"
               />
             </g>
-          </svg>
+          </svg> */}
+          <Image
+            src={`https://clingr.me/assets/images/media/landing/12.how-to-buy/modal@xxxl.webp`}
+            alt={`buy-img`}
+            fill
+            unoptimized
+            priority
+            loading="eager"
+            quality={80}
+            className="absolute z-10 "
+          />
         </motion.div>
 
         <p className=" leading-none text-[54px] text-white w-fit h-fit  text-center">

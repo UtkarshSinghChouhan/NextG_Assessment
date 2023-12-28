@@ -14,7 +14,7 @@ const Hero = () => {
   // State to toggle the but menu
   const [toggleBuy, setToggleBuy] = useState<boolean>(false);
   return (
-    <section className="relative w-full  h-screen bg-bg-gray">
+    <section className="relative w-full  h-screen bg-bg-gray overflow-hidden">
       <motion.div
         initial={{ y: "-100vh" }}
         animate={{
@@ -40,33 +40,77 @@ const Hero = () => {
           </motion.div>
 
           {/* Intro Content */}
-          <div className="my-auto overflow-hidden relative">
+          <div className="my-auto  relative ">
             {/* Intro text */}
-            <motion.h1
-              initial={{ y: 20, opacity: 0 }}
-              whileInView={{
-                y: 0,
-                opacity: 1,
-                transition: { type: "tween", delay: 1.6, duration: 0.7 },
-              }}
-              viewport={{
-                once: true,
-              }}
-              className=" text-center text-[120px] leading-none text-white w-fit h-full flex items-center"
+            <h1
+              // initial={{ y: 20, opacity: 0 }}
+              // whileInView={{
+              //   y: 0,
+              //   opacity: 1,
+              //   transition: { type: "tween", delay: 1.6, duration: 0.7 },
+              // }}
+              // viewport={{
+              //   once: true,
+              // }}
+              className="flex-col   text-center text-[120px] leading-none text-white w-fit h-full flex items-center"
             >
-              Beautiful hair?
-              <br /> It is easy and
-              <br /> wonderful{" "}
-            </motion.h1>
-          </div>
+              <motion.span
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "tween", duration: 0.7, delay: 1.6 },
+                }}
+              >
+                Beautiful hair?
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "tween", duration: 0.7, delay: 1.9 },
+                }}
+              >
+                It is easy and
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { type: "tween", duration: 0.7, delay: 2.2 },
+                }}
+              >
+                wonderfull
+              </motion.span>{" "}
+            </h1>
 
-          {/* Video*/}
-          {/* <ReactPlayer
-            url={`https://player.vimeo.com/video/724439058?background=1`}
-            width={`100%`}
-            hight={`100%`}
-            playing
-          /> */}
+            {/* Video*/}
+
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { type: "tween", delay: 2.4, duration: 0.7 },
+              }}
+            >
+              <div className="w-[377px] h-[220px] absolute -bottom-[9.5rem] -right-[15rem]">
+                <Image
+                  src={`/static-assets/images/video-bg.png`}
+                  alt={`video-bg`}
+                  fill
+                  unoptimized
+                  priority
+                  loading="eager"
+                  quality={90}
+                  objectFit="cover"
+                  className="rounded-[24px]"
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </motion.div>
 
@@ -114,10 +158,10 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Center Svg Icon */}
-      <div
-        className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full`}
-      >
+      <span>
         <motion.svg
+          className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full`}
+          pointerEvents={`none`}
           width="100%"
           height="100%"
           viewBox="0 0 1440 800"
@@ -198,7 +242,7 @@ const Hero = () => {
             ></motion.path>
           </g>
         </motion.svg>
-      </div>
+      </span>
     </section>
   );
 };

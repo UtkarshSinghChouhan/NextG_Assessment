@@ -49,7 +49,7 @@ const LinkAnimation = ({ children }: { children: any }) => {
 
 const NavContent = ({ setToggle, setToggleBuy }: INavBar) => {
   return (
-    <div className="relative z-10 w-full h-full max-w-[68%] text-center flex flex-col  items-center py-12">
+    <div className="relative z-10 w-full h-full max-w-[68%] text-center flex flex-col  items-center py-12 overflow-hidden">
       {/* NavBar */}
       <Navbar setToggle={setToggle} setToggleBuy={setToggleBuy} cross={true} />
 
