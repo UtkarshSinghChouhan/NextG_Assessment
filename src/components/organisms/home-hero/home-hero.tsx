@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import NavContent from "@/components/organisms/nav-content";
 import BuyContent from "../buy-content";
+import ReactPlayer from "react-player";
 
 const Hero = () => {
   // State to toggle the nav menu
@@ -20,9 +21,9 @@ const Hero = () => {
           y: 0,
           transition: { type: "tween", delay: 2, duration: 1.5 },
         }}
-        className="relative  flex w-full  h-full bg-hero-bg bg-no-repeat bg-cover justify-center cursor-default"
+        className="flex w-full  h-full  bg-hero-bg bg-no-repeat bg-cover justify-center cursor-default"
       >
-        <div className="relative z-20 flex flex-col items-center h-full max-w-[68%] w-full pt-12">
+        <div className="relative z-20 flex flex-col items-center h-full max-w-[68%] w-full pt-12 cursor-pointer">
           {/* Navbar */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -60,13 +61,12 @@ const Hero = () => {
           </div>
 
           {/* Video*/}
-          {/* <div className="aspect-video w-[40vw] h-[50vh]">
-          <ReactPlayer
+          {/* <ReactPlayer
             url={`https://player.vimeo.com/video/724439058?background=1`}
             width={`100%`}
             hight={`100%`}
-          />
-        </div> */}
+            playing
+          /> */}
         </div>
       </motion.div>
 
@@ -114,8 +114,8 @@ const Hero = () => {
       </AnimatePresence>
 
       {/* Center Svg Icon */}
-      {/* <div
-        className={`absolute z-0 bottom-0 left-1/2 -translate-x-1/2 w-full h-full`}
+      <div
+        className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full`}
       >
         <motion.svg
           width="100%"
@@ -198,7 +198,7 @@ const Hero = () => {
             ></motion.path>
           </g>
         </motion.svg>
-      </div> */}
+      </div>
     </section>
   );
 };

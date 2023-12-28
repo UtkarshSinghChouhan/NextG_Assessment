@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 
 const Navbar = ({ setToggle, setToggleBuy, cross = false }: INavBar) => {
   return (
-    <section className=" flex items-center justify-between w-full h-fit">
+    <section className="sticky flex items-center justify-between w-full h-fit cursor-pointer">
       {/* Logo */}
       <p className="text-white text-2xl leading-normal cursor-pointer">{`Clingr`}</p>
 
       {/* Buy button and Hamburger icon*/}
-      <div className="relative z-50 bg-white/40 flex  gap-[3.5rem]">
+      <div className="relative z-50  flex  gap-[3.5rem]">
         <div className="relative">
           <p
             className="leading-none text-white cursor-pointer"
